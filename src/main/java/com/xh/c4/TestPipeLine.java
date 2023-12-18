@@ -45,7 +45,8 @@ public class TestPipeLine {
                             public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
                                 log.debug("3,结果是{},class{}",msg,msg.getClass());
                                 super.channelRead(ctx, msg);
-                                ch.writeAndFlush(ctx.alloc().buffer().writeBytes("server".getBytes()));
+                                ctx.writeAndFlush(ctx.alloc().buffer().writeBytes("server".getBytes()));//从当前往上找
+//                                ch.writeAndFlush(ctx.alloc().buffer().writeBytes("server".getBytes()));//从尾巴往上找
                             }
                         });
                         pipeline.addLast("h4",new ChannelOutboundHandlerAdapter(){
