@@ -66,7 +66,7 @@ public class TestPipeLine {
                             @Override
                             public void write(ChannelHandlerContext ctx, Object msg, ChannelPromise promise) throws Exception {
                                 log.debug("6");
-                                super.write(ctx, msg, promise);///111
+                                super.write(ctx, msg, promise);///111111
                             }
                         });
                     }
