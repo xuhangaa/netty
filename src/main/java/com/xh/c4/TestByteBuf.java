@@ -17,7 +17,7 @@ public class TestByteBuf {
         buf.writeBytes(sb.toString().getBytes());
         log(buf);
     }
-    private static void log(ByteBuf buffer) {
+    public static void log(ByteBuf buffer) {
         int length = buffer.readableBytes();
         int rows = length / 16 + (length % 15 == 0 ? 0 : 1) + 4;
         StringBuilder buf = new StringBuilder(rows * 80 * 2)

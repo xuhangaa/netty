@@ -1,4 +1,4 @@
-package com.xh.c4;
+package com.xh.c3;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;
